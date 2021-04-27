@@ -1,0 +1,14 @@
+stoimost = 0
+skidka = 10
+bilet = int(input("Введите количество билетов: "))
+for i in range(int(bilet)):
+    age = int(input("Введите возраст посетителей: "))
+    if 0 <= int(age) <= 17:
+        stoimost += 0
+    elif 18 <= int(age) <= 24:
+        stoimost += 990
+    elif int(age) >= 25:
+        stoimost += 1390
+if bilet >= 4:
+    stoimost = stoimost - (stoimost * skidka / 100)
+print("Итого: ", stoimost)
